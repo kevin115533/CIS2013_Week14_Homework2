@@ -17,7 +17,7 @@ public:
 
 	void add(string i);
 	
-	void done();
+	void done(int taskNum);
 
 	void print();
 };

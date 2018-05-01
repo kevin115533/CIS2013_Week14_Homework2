@@ -6,6 +6,7 @@ using namespace std;
 int main() {
 	char next = 'y';
 	int len = 0;
+	int taskNum;
 	string action;
 	
 	cout << "How long do you want your list? ";
@@ -29,8 +30,11 @@ int main() {
 			getline(cin, action);
 			list.add(action);
 			break;
-		case 'd':  
-			list.done();
+		case 'd':
+			cout << "Which number task do you want to take off? ";
+			cin.ignore();
+			cin >> taskNum;
+			list.done(taskNum);
 			break;
 		case 'p':  
 			list.print();

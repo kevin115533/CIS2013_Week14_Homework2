@@ -22,9 +22,13 @@ void ToDo::add(string item) {
 	}
 }
 
-void ToDo::done() {
-	next--;
-	list[next] = "";
+void ToDo::done(int taskNum) {
+	taskNum = taskNum - 1;
+	for (int i = 0; i < next; i++) {
+		if (taskNum == i) {
+			list[i] = "";
+		}
+	}
 }
 
 void ToDo::print() {
